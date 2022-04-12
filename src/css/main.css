@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #F2F2F2;
+}
+
+/*header*/
+.header-menu {
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    width: 100%;
+    height: 7.5%;
+    box-shadow: -3px 0 5px 2px #bebebf;
+}
+
+.vertical-line {
+    margin: 0 5px;
+    width: 2px;
+    height: 80%;
+    background-color: #d7d8da;
+}
+
+.header-menu > button {
+    margin: 0 10px;
+    border: 0;
+    padding: 0;
+}
+
+.md-help_outline, .user-center {
+    position: relative;
+    left: 34%;
+}
+
+.header-menu > button > span {
+    display: block;
+    font-size: 12px;
+}
+
+#content {
+    display: flex;
+    justify-content: start;
+    margin-top: 5px;
+    width: 100%;
+    height: 90%;
+}
+
+#content > div {
+    height: 99%;
+}
+
+/*left-menu*/
+#left-menu {
+    flex: 3;
+    text-align: center;
+}
+
+#left-menu div {
+    margin-top: 20px;
+}
+
+#left-menu div button {
+    border: 0;
+    margin-top: 5px;
+}
+
+/*repertory*/
+.repertory {
+    width: 20%;
+    background: white;
+    box-shadow: 0 3px 3px 3px #d7d8da;
+}
+
+.repertory-top {
+    display: flex;
+    padding: 5px 0;
+    width: 100%;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+}
+
+.repertory-top span {
+    margin-left: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.repertory-top input {
+    width: 60%;
+    height: 60%;
+    border: 2px solid #d3d3d4;
+    box-shadow: 0 0 2px #d7d8da;
+}
+
+.repertory-top button {
+    margin: auto 0;
+    width: 10%;
+    height: 60%;
+}
+.repertory-category{
+    width: 94%;
+    height: 9%;
+    margin-left: 2%;
+}
+.repertory-category >button{
+    float: left;
+    margin-bottom: 10px;
+    width: 48%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 0 5px 1px #bebebf;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.repertory-content {
+    margin-left: 2%;
+    width: 96%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.repertory-content::-webkit-scrollbar{
+    width: 8px;
+    height: 200px;
+    background-color: #F2F2F2;
+}
+/*track外层轨道,track-piece内层轨道,thumb滑块,corner边角,button两端按钮*/
+.repertory-content::-webkit-scrollbar-track{
+    border-radius: 6px;
+    background-color: #F2F2F2;
+}
+.repertory-content::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background-color: #D8D8D8;
+}
+
+
+.repertory-project-scene {
+    clear: left;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18%;
+}
+
+.repertory-common-scene {
+    clear: left;
+    margin-top: 7px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 18%;
+}
+
+.repertory-project-row, .repertory-common-row {
+    clear: left;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18%;
+}
+
+.repertory-project-item, .repertory-common-item {
+    float: left;
+    width: 48%;
+    height: 98%;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 0 5px 1px #bebebf;
+    cursor: pointer;
+}
+
+.repertory-project-item > img, .repertory-common-item > img {
+    margin-left: 6px;
+    width: 86%;
+    height: 80%;
+}
+
+.repertory-project-item > p, .repertory-common-item > p {
+    text-align: end;
+    font-size: 12px;
+}
+
+/*main scene*/
+#main {
+    flex: 100;
+}
+
+#scene {
+    width: 100%;
+    height: 100%;
+}
+
+#scene > img {
+    margin-left: 2px;
+    margin-top: 60px;
+    width: 100%;
+    height: 80%;
+}
+
+/*right-menu*/
+#right-menu {
+    width: 17%;
+    background: white;
+    box-shadow: 0 3px 3px 3px #d7d8da;
+}
+
+#right-menu > #right-menu-top {
+    height: 30%;
+}
+
+#right-menu > #right-menu-top > div {
+    padding: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    height: 16%;
+
+}
+
+#right-menu > #right-menu-top > div > span {
+    margin-left: 10px;
+}
+
+#right-menu > #right-menu-top > img {
+    margin: 2px 20px;
+    width: 80%;
+    height: 76%;
+}
+
+/*right-menu-bottom*/
+#right-menu .right-menu-bottom {
+    width: 100%;
+    height: 70%;
+}
+
+.right-menu-bottom-props {
+    padding: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background-color: #F2F2F2;
+}
+
+.right-menu-bottom-props > span {
+    margin-left: 10px;
+}
+
+.right-menu-bottom-args {
+    margin-top: 3%;
+}
+
+.right-menu-bottom-args .base-args {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 15px;
+    font-size: 14px;
+}
+
+.right-menu-bottom-args > .arg-list {
+    margin: 8px 10px;
+    display: none;
+}
+
+.right-menu-bottom-args > .arg-list > span {
+    margin-left: 16px;
+    margin-right: 4px;
+    font-size: 13px;
+    color: darkgray;
+}
+
+.right-menu-bottom-args > .arg-list > input[type="range"] {
+    width: 40%;
+    height: 5px;
+}
+
+.right-menu-bottom-args > .arg-list > input[type="number"] {
+    width: 20%;
+    height: 50%;
+}
+.right-menu-bottom-args > .arg-list > input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+.arg-list > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+select {
+    width: 10%;
+    height: 70%;
+    appearance: none;
+}
+

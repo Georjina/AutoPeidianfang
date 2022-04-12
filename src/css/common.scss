@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*初始化样式*/
+ul{
+  list-style: none;
+}
+/*临时通用样式*/
+.m-dialog{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  &.show{
+    display: block;
+  }
+  .dialog-content{
+    position: absolute;
+    width: 30%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    &.center{
+      top:50%;left:50%;
+      transform: translate(-50%,-50%);
+      margin: auto;
+    }
+    &.top{
+      top:0;left:0;right: 0;
+      margin: 15vh auto 0;
+    }
+  }
+  .dialog-hd{
+    display: flex;
+    align-items: center;justify-content: space-between;
+    padding: 20px 20px 10px;
+    .title{
+      font-size: 18px;font-weight: normal;
+    }
+    .close{
+      width: 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  .dialog-bd{
+    //min-height: 200px;
+    padding: 20px 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .dialog-ft{
+    display: flex;
+    align-items: center;justify-content: flex-end;
+    padding:10px 20px 20px;
+    .u-btn{
+      &:not(:first-child){
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.m-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m-loading{
+  z-index: 2000;
+}
+//unit
+.u-btn{
+  border:1px solid #cccc;
+  border-radius: 4px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  $primary:rgb(64,158,255);
+  &:hover{
+    background: rgb(236,245,255);
+    color:$primary;
+  }
+  &.type-primary{
+    color:#fff;
+    background: $primary;
+    &:hover{
+      background: #66b1ff;
+    }
+  }
+}
+.u-input{
+  border:1px solid #ccc;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 6px;
+  outline: none;
+  font-size: 14px;
+}
+//项目内
+.m-save-input{
+  text-align: center;
+}
+.m-file-ul{
+  display: flex;flex-direction: column;
+  .file-li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    &:not(:first-child){margin-top:14px}
+    .li-lt{
+      display: flex;
+      align-items: center;
+      .icon{
+        width: 16px;
+      }
+      .name{
+        font-size: 14px;
+      }
+    }
+    .li-rt{
+      color: #919191;
+    }
+  }
+}
